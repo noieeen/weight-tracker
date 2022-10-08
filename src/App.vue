@@ -1,4 +1,4 @@
-<script setup>
+<script  setup>
 import { ref, shallowRef, computed, watch, nextTick } from "vue";
 import Chart from "chart.js/auto";
 
@@ -113,4 +113,55 @@ watch(
 </template>
 
 <style scoped>
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'montserrat', sans-serif;
+}
+
+.current{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 200px;
+
+  text-align: center;
+  border-radius:50%;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  border:5px solid hwb(330 41% 0%);
+  background-color: #313131;
+  margin: 2rem auto 1rem;
+}
+
+.current > span{
+  font-size: 3rem;
+  font-weight: bold;
+  color:  hwb(330 41% 0%);
+  margin-bottom: 1rem;
+}
+
+.weight-history{
+  margin-top: 1rem;
+}
+.weight-history ul{
+  margin-top: .5rem;
+  height: 100px;
+  overflow-y:auto ;
+}
+
+.weight-history li{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.weight-history li >span{
+  font-weight: bold;
+}
+
 </style>
